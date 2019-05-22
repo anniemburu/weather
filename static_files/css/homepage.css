@@ -1,0 +1,14 @@
+body {
+    padding-left: 15px;
+}
+
+th {
+    width: 50%;
+}
+
+.weather_display {
+    border-radius: 20px;
+    padding: 35px;
+    background-color: #DE1FDE;
+    color: #ffffff;
+}

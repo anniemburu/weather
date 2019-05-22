@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="weather_display">
+
+        <div class="message">
+            <h1> Wambo's Weather Forecasting ;-) </h1>
+
+            <p>Hey!! Dont know how the weather today. Might rain or there might be a killer sun. We got your back. You
+                can check the weather
+                below..</p>
+        </div>
+
+        <div class="find_weather">
+
+            <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+
+        </div>
+    </div>
+    <div>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>TEMPERATURE</th>
+                    <th>PRESSURE</th>
+                    <th>WEATHER DESCRIPTION</th>
+                    <th>WIND SPEED</th>
+                    <th>IMAGE</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>{{ day1.Date }}</td>
+                <td>{{ day1.Temperature }}</td>
+                <td>{{ day1.Pressure }}</td>
+                <td>{{ day1.Weather_Description }}</td>
+                <td>{{ day1.Wind_Speed }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ day1.Icon }}.png"></td>
+
+            </tr>
+
+            <tr>
+                <td>{{ day2.Date }}</td>
+                <td>{{ day2.Temperature }}</td>
+                <td>{{ day2.Pressure }}</td>
+                <td>{{ day2.Weather_Description }}</td>
+                <td>{{ day2.Wind_Speed }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ day2.Icon }}.png"></td>
+            </tr>
+
+            <tr>
+                <td>{{ day3.Date }}</td>
+                <td>{{ day3.Temperature }}</td>
+                <td>{{ day3.Pressure }}</td>
+                <td>{{ day3.Weather_Description }}</td>
+                <td>{{ day3.Wind_Speed }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ day3.Icon }}.png"></td>
+            </tr>
+
+            <tr>
+                <td>{{ day4.Date }}</td>
+                <td>{{ day4.Temperature }}</td>
+                <td>{{ day4.Pressure }}</td>
+                <td>{{ day4.Weather_Description }}</td>
+                <td>{{ day4.Wind_Speed }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ day4.Icon }}.png"></td>
+            </tr>
+
+            <tr>
+                <td>{{ day5.Date }}</td>
+                <td>{{ day5.Temperature }}</td>
+                <td>{{ day5.Pressure }}</td>
+                <td>{{ day5.Weather_Description }}</td>
+                <td>{{ day5.Wind_Speed }}</td>
+                <td><img src="http://openweathermap.org/img/w/{{ day5.Icon }}.png"></td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
+
+
